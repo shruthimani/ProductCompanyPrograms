@@ -1,0 +1,34 @@
+write a program to count the number of duplicates in the given array.
+Sample i/p: a[]={1,2,1,3,2,1}
+Sample o/p: 2 (the numbers 1 and 2 are duplicated).
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+        Scanner s=new Scanner(System.in);
+		ArrayList<Integer> arr=new ArrayList<>();
+		while(s.hasNextInt())
+			arr.add(s.nextInt());
+		
+		ArrayList<Integer> freq=new ArrayList<>();
+		for(int i=0;i<arr.size();i++)
+			freq.add(Collections.frequency(arr, arr.get(i)));
+		
+		Map<Integer,Integer> map=new TreeMap<Integer,Integer>();
+		for(int i=0;i<arr.size();i++)
+		{
+			map.put(arr.get(i), freq.get(i));
+		}
+		int count=0;
+		
+		for(Map.Entry<Integer,Integer> mp:map.entrySet())
+		{
+		    if(mp.getValue()>1)
+		    count++;
+		}
+		System.out.println(count);
+
+    }
+}
