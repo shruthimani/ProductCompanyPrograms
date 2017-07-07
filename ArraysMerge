@@ -1,0 +1,25 @@
+//AMAZON//
+
+Given two arrays and b ,Merge two arrays in sorted order.
+
+ip:
+a[]:3 3 9 8 7 
+b[]:13 10 12 15 17 14 11 16
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+import java.util.*;
+public class MyClass {
+  
+    public static void main(String args[]) {
+        Scanner s=new Scanner(System.in);
+        
+        Set<Integer> arr1=new TreeSet<>();
+       
+        
+        while(s.hasNextInt())
+        arr1.add(s.nextInt());
+       
+        for(int num:arr1)
+        System.out.print(num+" ");
+    }
+}
