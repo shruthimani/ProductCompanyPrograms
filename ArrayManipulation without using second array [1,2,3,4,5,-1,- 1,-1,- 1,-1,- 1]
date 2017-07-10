@@ -1,0 +1,34 @@
+INPUT: [1,1,2,2,3,3,3,4,5,5,5]
+OUTPUT: [1,2,3,4,5,-1,- 1,-1,- 1,-1,- 1] (without using second array)
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+       Scanner s=new Scanner(System.in);
+       ArrayList<Integer> arr=new ArrayList<>();
+       
+       while(s.hasNextInt())
+       arr.add(s.nextInt());
+       
+       int n=arr.size();
+       int temp=0,count=0;
+       
+       
+       for(int i=-1;i<n-1;i++)
+       {
+           
+           if(temp != arr.get(i+1))
+           {
+               temp=arr.get(i+1);
+               System.out.print(temp+" ");
+               count++;
+           }
+       }
+       while(count<=n-1){
+       System.out.print("-1"+" ");
+       count++;
+           
+       }
+    }
+}
