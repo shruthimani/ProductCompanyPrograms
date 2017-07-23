@@ -1,0 +1,23 @@
+Find the number of variables in a given equation? 
+Ex1: 
+I/P: A+(B/2)+C 
+O/P: 3 
+
+I/P: A+(B/2)+(B*A) 
+O/P: 2
+
+
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+        Scanner s=new Scanner(System.in);
+        String str=s.next();
+        Set<Character> set=new HashSet<>();
+        for(int i=0;i<str.length();i++)
+        {
+            if(Character.isLetter(str.charAt(i)))
+            set.add(str.charAt(i));
+        }
+        System.out.println(set.size());
+    }
+}
