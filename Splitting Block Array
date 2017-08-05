@@ -1,0 +1,45 @@
+You are given an array. Split the array in the given order K and reverse the numbers.
+INPUT: {8,4,5,6,7,2,9,7}
+K value: 3
+OUTPUT: {5,4,8,2,7,6,7,9}
+Explanation: The give k value is 3 so split the array as 3 parts. Ie, {8,4,5},{6,7,2},{9,7}
+Now reverse each array {5,4,8},{2,7,6},{7,9}
+So the output is {5,4,8,2,7,6,7,9}
+INPUT:{8,4,5,6,7,2,9,7}
+K value: 5
+OUTPUT: {7,6,5,4,8,7,9,2}
+
+
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+        Scanner s=new Scanner(System.in);
+        ArrayList<Integer> arr=new ArrayList<>();
+        int n=s.nextInt();
+        for(int i=0;i<n;i++)
+        arr.add(s.nextInt());
+        int i=0;
+        int k=s.nextInt();
+        for(i=0;i<=n-k;i=i+k)
+        {
+            for(int j=i+k-1;j>=i;j--)
+            {
+                System.out.print(arr.get(j)+" ");
+            }
+        }
+        int rem=n-i;
+        
+        for(i=0;i<rem;i++)
+        {
+        System.out.print(arr.get(n-1)+" ");
+        n--;
+    }
+    }
+}
+
+my i/p & o/p:
+7
+8 4 5 6 7 5 4
+4
+
+6 5 4 8 4 5 7
