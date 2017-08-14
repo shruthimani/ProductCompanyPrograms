@@ -1,0 +1,53 @@
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+        Scanner s=new Scanner(System.in);
+        int m=s.nextInt();
+        int n=s.nextInt();
+        
+        int[][] arr=new int[m][n];
+        for(int i=0;i<m;i++)
+        for(int j=0;j<n;j++)
+        arr[i][j]=s.nextInt();
+        
+        int startRow=s.nextInt();
+        int startCol=s.nextInt();
+        int sr=startRow;
+        int sc=startCol;
+        int i=0,j=0,k=0;
+        int count=0,f=0;
+        
+        if(startRow==0)
+        {
+            
+            for(j=startCol;j<n;j++)
+            {
+                if(count%2 == 0){
+                for(i=0;i<m;i++)
+                {
+                    System.out.print(arr[i][j]+" ");
+                }
+                count++;
+                }
+                
+                else
+                {
+                    for(k=m-1;k>=0;k--)
+                    System.out.print(arr[k][j]+" ");
+                    count++;
+                }
+                
+                if(j==n-1){
+                j=-1;
+                f=1;
+                }
+                if(j==sc-1 && f==1)
+                break;
+                
+            }
+            
+        }
+        
+        
+    }
+}
