@@ -48,6 +48,67 @@ public class MyClass {
             
         }
         
+        else if(startCol == 0)
+        {
+            for(j=startCol;j<n;j++)
+            {
+                if(count%2 == 0)
+                {
+                    for(i=m-1;i>=0;i--)
+                    System.out.print(arr[i][j]+" ");
+                    
+                    count++;
+                    
+                }
+                
+                else
+                {
+                    for(k=0;k<=m-1;k++)
+                    System.out.print(arr[k][j]+" ");
+                    count++;
+                }
+                if(j==n-1)
+                {
+                    j=-1;
+                    f=1;
+                    
+                }
+                if(j==sc-1 && f==1)
+                break;
+            }
+        }
         
-    }
+       else if(startRow==m-1){
+               for(j=startCol;j<n;j++)
+               {
+                if(count%2 == 0){
+                for(i=m-1;i>=0;i--)
+                {
+                    System.out.print(arr[i][j]+" ");
+                }
+                count++;
+                }
+                
+                else
+                {
+                    for(k=0;k<=m-1;k++)
+                    System.out.print(arr[k][j]+" ");
+                    count++;
+                }
+                
+                if(j==n-1){
+                j=-1;
+                f=1;
+                }
+                if(j==sc-1 && f==1)
+                break;
+                
+                }
+               
+            }
+       
+        else
+        System.out.println("Invalid Input....Enter the valid Input..!!!");
+       }
+    
 }
