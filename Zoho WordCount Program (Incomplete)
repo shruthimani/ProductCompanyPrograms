@@ -1,0 +1,31 @@
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+        Scanner s=new Scanner(System.in);
+        
+        int maxChar=s.nextInt();
+        char favChar=s.next().charAt(0);
+        s.nextLine();
+        
+        String str=s.nextLine();
+        String[] words=str.split(",");
+        int len=words.length;
+        ArrayList<Characters> arr=new ArrayList<>();
+       
+        Map<String,Integer> map=new HashMap<>();
+        for(String num: words)
+            map.put(num,num.length());
+        
+        for(int i=0;i<len-1;i++)
+        {
+            for(int j=i+1;j<len;j++)
+            {
+                arr=Arrays.asList(words[i]);
+                if((words[i].length()+words[j].length())<=maxChar)
+                {
+                    
+                }
+            }
+        }
+    }
+}
